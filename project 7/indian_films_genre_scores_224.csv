@@ -1,0 +1,225 @@
+id,title,language,action,mythological,folk_horror,gore,sarcasm_comedy,romance,drama_social,thriller_investigative,sci_fi_fantasy,slice_of_life,crime_mafia,political,sports,survival,melodrama
+1,Kantara,Kannada,8,9,8,5,4,6,8,6,3,5,4,6,1,5,6
+2,Baahubali: The Beginning,Telugu,9,8,2,4,3,7,6,3,2,1,3,8,1,3,8
+3,Baahubali 2: The Conclusion,Telugu,9,8,2,4,3,7,6,3,2,1,3,8,1,3,8
+4,RRR,Telugu,10,7,1,5,4,4,7,4,1,2,2,9,2,4,8
+5,KGF: Chapter 1,Kannada,10,3,1,8,2,3,5,5,1,1,10,8,0,4,7
+6,KGF: Chapter 2,Kannada,10,3,1,8,2,3,5,5,1,1,10,8,0,4,7
+7,Pushpa: The Rise,Telugu,8,1,1,7,4,3,7,2,6,9,7,7,9,9,6
+8,Vikram,Tamil,3,2,0,1,8,3,9,2,1,5,7,5,7,4,5
+9,Leo,Tamil,2,2,8,1,6,9,8,2,0,3,9,1,1,2,3
+10,Jailer,Tamil,3,1,1,4,6,3,6,6,0,7,3,3,7,9,9
+11,Ponniyin Selvan: I,Tamil,7,8,8,1,2,5,4,2,6,1,9,8,0,9,3
+12,Ponniyin Selvan: II,Tamil,5,8,5,6,2,7,8,2,2,9,5,5,2,4,6
+13,Drishyam,Malayalam,4,0,1,4,2,2,6,10,0,4,5,3,0,5,6
+14,Drishyam 2,Malayalam,4,0,1,4,2,2,6,10,0,4,5,3,0,5,6
+15,Manjummel Boys,Malayalam,5,1,2,2,4,1,6,5,0,6,0,2,1,10,7
+16,Premalu,Malayalam,2,0,0,0,8,9,7,2,0,10,1,1,1,2,6
+17,Aavesham,Malayalam,7,0,1,4,10,3,5,6,1,3,8,2,0,2,3
+18,Bramayugam,Malayalam,4,9,10,7,1,1,8,8,3,1,2,6,0,7,5
+19,2018,Malayalam,5,1,2,2,4,1,6,5,0,6,0,2,1,10,7
+20,Kumbalangi Nights,Malayalam,2,0,0,0,8,9,7,2,0,10,1,1,1,2,6
+21,Lucifer,Malayalam,7,2,5,1,2,3,4,6,2,5,9,8,9,4,3
+22,Minnal Murali,Malayalam,5,6,8,7,4,1,9,2,1,1,9,8,1,4,9
+23,Kalki 2898 AD,Telugu,8,8,1,3,4,4,4,7,10,1,2,5,0,5,5
+24,Sita Ramam,Telugu,5,0,5,6,6,9,6,2,6,9,9,8,0,4,9
+25,Eega,Telugu,9,0,5,4,4,5,7,8,6,1,7,3,1,7,9
+26,Magadheera,Telugu,3,2,1,2,9,3,8,2,0,1,5,7,7,1,9
+27,Arjun Reddy,Telugu,8,8,1,1,6,9,7,9,1,7,5,8,7,4,8
+28,Jersey,Telugu,5,2,8,7,2,3,8,8,2,3,5,1,7,7,3
+29,C/o Kancharapalem,Telugu,9,8,0,1,2,1,7,9,0,3,9,8,7,1,8
+30,Vikram Vedha,Tamil,5,2,5,4,4,3,6,9,2,9,3,3,9,2,3
+31,Ratsasan,Tamil,4,0,1,4,2,2,6,10,0,4,5,3,0,5,6
+32,Kaithi,Tamil,9,1,2,4,8,5,8,9,1,3,7,3,0,9,6
+33,Asuran,Tamil,6,1,1,6,2,2,10,8,0,5,4,9,0,4,7
+34,Jai Bhim,Tamil,6,1,1,6,2,2,10,8,0,5,4,9,0,4,7
+35,96,Tamil,2,0,0,0,8,9,7,2,0,10,1,1,1,2,6
+36,Super Deluxe,Tamil,7,0,2,1,6,9,7,9,1,9,9,3,0,4,5
+37,Sarkar,Tamil,7,8,5,6,8,7,6,2,1,9,5,7,1,7,3
+38,Master,Tamil,7,8,5,1,2,5,9,9,1,3,1,8,7,4,9
+39,Soorarai Pottru,Tamil,8,8,5,6,2,3,4,8,6,7,1,7,1,9,6
+40,Pariyerum Perumal,Tamil,6,1,1,6,2,2,10,8,0,5,4,9,0,4,7
+41,Mandela,Tamil,7,0,8,1,4,3,7,8,6,1,5,1,9,9,6
+42,777 Charlie,Kannada,9,6,5,7,9,7,8,8,6,1,3,8,0,9,9
+43,Lucia,Kannada,2,6,2,1,4,3,7,8,9,1,3,5,0,2,5
+44,Uturn,Kannada,5,1,5,6,8,7,8,4,9,5,7,8,7,2,9
+45,Sarkar Vaari Paata,Telugu,2,1,1,6,2,5,7,4,1,3,9,1,9,9,3
+46,Saripodhaa Sanivaaram,Telugu,3,8,1,4,2,9,6,9,2,3,3,1,7,7,3
+47,Hanu-Man,Telugu,7,2,8,6,6,1,4,6,0,3,9,8,7,2,9
+48,Salaar: Part 1 - Ceasefire,Telugu,10,3,1,8,2,3,5,5,1,1,10,8,0,4,7
+49,Devara: Part 1,Telugu,7,8,1,7,8,7,9,9,9,7,9,5,7,4,6
+50,Thangalaan,Tamil,5,8,8,1,6,5,6,8,2,1,9,5,2,7,6
+51,Great Indian Kitchen,Malayalam,7,6,8,7,6,9,6,9,6,1,1,8,9,7,3
+52,Bangalore Days,Malayalam,2,0,0,0,8,9,7,2,0,10,1,1,1,2,6
+53,Premam,Malayalam,2,0,0,0,8,9,7,2,0,10,1,1,1,2,6
+54,Maheshinte Prathikaaram,Malayalam,5,0,8,2,6,3,6,9,6,1,7,3,2,7,6
+55,Thondimuthalum Driksakshiyum,Malayalam,7,2,5,2,4,9,7,2,6,9,9,7,9,9,3
+56,Jada,Malayalam,2,0,8,2,6,9,6,9,1,5,5,8,9,9,3
+57,Jallikattu,Malayalam,9,1,0,2,9,1,7,4,9,1,3,1,1,7,3
+58,Churuli,Malayalam,3,2,8,7,4,5,6,8,9,3,9,7,0,4,5
+59,Nanpakal Nerathu Mayakkam,Malayalam,2,1,1,7,4,5,4,4,0,3,7,5,9,4,3
+60,Kishkindha Kaandam,Malayalam,7,8,5,1,2,7,8,8,1,5,1,5,0,4,3
+61,Bheeshma Parvam,Malayalam,9,6,1,2,4,9,4,4,6,5,3,1,1,4,5
+62,Kannur Squad,Malayalam,5,8,2,4,4,5,7,8,9,3,5,1,7,7,8
+63,Iratta,Malayalam,9,0,0,4,6,5,6,6,6,9,9,3,0,1,3
+64,Joseph,Malayalam,9,0,0,1,4,9,9,6,9,3,5,1,7,2,9
+65,Nayattu,Malayalam,8,1,5,2,6,5,8,9,2,5,7,8,9,9,6
+66,Trance,Malayalam,8,2,5,4,2,1,6,2,0,7,7,1,7,9,6
+67,Virus,Malayalam,2,1,5,1,8,3,9,2,9,9,1,8,9,1,9
+68,Take Off,Malayalam,9,2,2,7,2,7,9,8,6,5,3,8,2,4,6
+69,Traffic,Malayalam,2,6,5,7,2,5,7,6,2,1,5,1,9,7,6
+70,Charlie,Malayalam,8,1,8,4,8,5,6,4,6,3,9,7,0,4,6
+71,Urumi,Malayalam,5,1,8,7,6,7,8,6,1,3,9,7,7,2,8
+72,Amen,Malayalam,9,1,0,1,2,3,4,2,1,5,9,1,1,9,5
+73,Double Barrel,Malayalam,7,8,2,7,6,9,9,4,1,1,7,7,9,2,3
+74,Angamaly Diaries,Malayalam,3,2,0,7,4,9,6,6,2,3,9,1,9,9,5
+75,Eeda,Malayalam,7,2,0,4,9,3,9,6,0,7,3,7,2,4,8
+76,Sudani from Nigeria,Malayalam,9,6,0,7,9,7,8,8,1,5,9,3,7,2,3
+77,Kettiyollaanu Ente Malakha,Malayalam,9,1,8,7,2,3,4,4,0,3,9,5,2,9,3
+78,Moothon,Malayalam,2,1,5,6,2,9,4,2,1,1,7,7,1,2,3
+79,Kappela,Malayalam,7,6,2,2,8,1,4,8,0,5,3,7,7,4,8
+80,Thinkalazhcha Nishchayam,Malayalam,5,1,1,2,2,7,8,9,6,7,9,8,2,7,9
+81,Home,Malayalam,3,1,1,2,9,9,4,9,0,3,9,1,9,4,3
+82,Hridayam,Malayalam,3,1,8,2,6,3,9,6,1,7,1,3,9,4,3
+83,Mukundan Unni Associates,Malayalam,5,8,0,2,2,1,4,2,2,7,5,7,1,7,5
+84,Romancham,Malayalam,8,0,8,2,8,7,4,8,1,5,9,3,7,7,9
+85,Falimy,Malayalam,5,1,8,7,2,7,4,9,9,1,3,7,1,9,5
+86,Neru,Malayalam,2,8,0,1,6,7,9,2,0,3,7,1,9,1,5
+87,Varshangalkku Shesham,Malayalam,2,1,1,4,2,5,8,2,0,7,9,1,9,7,5
+88,Turbo,Malayalam,5,1,8,7,9,5,4,9,2,1,7,8,1,2,8
+89,ARM,Malayalam,7,0,2,4,8,3,6,9,1,3,9,5,1,1,3
+90,Enthiran,Tamil,8,8,1,3,4,4,4,7,10,1,2,5,0,5,5
+91,2.0,Tamil,2,6,1,6,9,5,6,4,9,7,3,7,7,9,8
+92,Petta,Tamil,5,6,1,7,9,7,9,6,6,7,1,8,9,4,9
+93,Vada Chennai,Tamil,5,1,8,1,9,1,7,6,1,7,5,1,0,9,5
+94,Visaranai,Tamil,6,1,1,6,2,2,10,8,0,5,4,9,0,4,7
+95,Kannathil Muthamittal,Tamil,2,8,5,6,9,9,9,4,6,3,7,1,1,4,5
+96,Anbe Sivam,Tamil,5,8,1,4,8,1,4,9,2,7,7,7,1,4,3
+97,Ayan,Tamil,3,6,2,4,6,3,4,8,9,3,1,8,7,1,8
+98,Sivaji: The Boss,Tamil,7,1,1,6,6,3,7,4,0,1,9,7,2,2,5
+99,Ghilli,Tamil,8,8,5,4,4,5,4,2,1,1,7,3,9,7,9
+100,Thuppakki,Tamil,2,0,2,2,4,5,7,8,2,5,9,5,9,7,6
+101,Kaththi,Tamil,5,6,8,4,6,1,7,8,0,9,7,7,7,2,3
+102,Maanagaram,Tamil,8,0,0,4,8,1,8,2,6,5,9,8,7,1,9
+103,Thani Oruvan,Tamil,8,2,2,1,8,5,9,8,2,3,9,8,2,2,8
+104,Subramaniapuram,Tamil,9,6,8,6,4,7,4,8,2,7,3,7,0,1,5
+105,Paruthiveeran,Tamil,8,1,5,7,2,5,6,9,6,5,1,5,9,4,6
+106,Pudhupettai,Tamil,9,0,0,6,2,1,7,4,2,3,7,8,9,4,3
+107,Aayirathil Oruvan,Tamil,2,1,2,1,2,5,8,4,0,7,5,7,2,9,6
+108,Jigarthanda,Tamil,7,0,1,4,10,3,5,6,1,3,8,2,0,2,3
+109,Jigarthanda DoubleX,Tamil,7,0,1,4,10,3,5,6,1,3,8,2,0,2,3
+110,Iraivi,Tamil,2,8,0,1,6,1,9,2,1,3,3,8,7,4,8
+111,Pizza,Tamil,9,8,0,1,4,7,9,2,6,3,7,1,1,9,8
+112,Soodhu Kavvum,Tamil,9,2,2,7,9,3,7,6,6,3,3,7,7,7,3
+113,Maanaadu,Tamil,8,8,1,3,4,4,4,7,10,1,2,5,0,5,5
+114,24,Tamil,8,8,1,3,4,4,4,7,10,1,2,5,0,5,5
+115,Indru Netru Naalai,Tamil,5,1,2,7,6,1,9,8,9,3,7,8,0,4,5
+116,Doctor,Tamil,7,0,1,4,10,3,5,6,1,3,8,2,0,2,3
+117,Don,Tamil,2,2,2,1,8,1,8,4,6,5,1,7,7,2,9
+118,Love Today,Tamil,7,1,1,2,2,3,6,6,0,7,9,8,2,1,8
+119,Viduthalai Part 1,Tamil,2,1,8,7,8,5,7,4,0,3,9,8,7,7,6
+120,Maaveeran,Tamil,2,8,0,1,2,7,9,6,0,7,5,5,9,2,5
+121,Por Thozhil,Tamil,4,0,1,4,2,2,6,10,0,4,5,3,0,5,6
+122,Chitha,Tamil,2,8,8,2,2,5,4,8,2,9,1,7,7,4,6
+123,Parking,Tamil,5,2,0,4,4,7,7,8,0,5,3,7,7,2,9
+124,Lover,Tamil,5,8,1,2,9,7,4,9,2,1,7,3,7,1,6
+125,Garudan,Tamil,5,2,0,6,9,1,7,9,1,3,7,7,1,7,6
+126,Maharaja,Tamil,9,0,2,1,9,3,4,2,6,3,9,3,2,9,5
+127,Kottukkaali,Tamil,2,0,5,2,4,3,6,9,1,1,3,7,9,4,8
+128,Amaran,Tamil,2,0,2,2,8,9,9,4,9,7,1,7,7,1,3
+129,GOAT,Tamil,8,1,5,2,2,7,4,4,0,9,5,5,2,7,9
+130,Ala Vaikunthapurramuloo,Telugu,2,8,2,1,6,1,6,8,2,9,7,7,1,1,8
+131,Rangasthalam,Telugu,3,1,0,4,8,5,4,6,1,3,5,7,9,4,5
+132,Mahanati,Telugu,2,2,5,7,2,1,4,9,1,9,5,8,9,9,9
+133,Pokiri,Telugu,9,0,0,4,9,1,7,4,9,1,3,7,1,4,6
+134,Athadu,Telugu,3,2,8,1,6,1,8,9,2,7,3,5,7,9,5
+135,Okkadu,Telugu,3,6,0,2,2,1,4,4,1,5,1,5,0,2,3
+136,Khaleja,Telugu,3,6,0,2,8,9,6,2,0,3,9,7,1,4,9
+137,Goodachari,Telugu,5,2,0,4,4,9,9,2,9,7,1,1,0,9,6
+138,Agent Sai Srinivasa Athreya,Telugu,9,8,2,4,6,5,9,8,2,3,5,3,0,9,8
+139,HIT: The First Case,Telugu,3,0,8,6,6,3,6,8,0,9,3,1,9,4,8
+140,HIT: The Second Case,Telugu,7,1,5,4,6,7,8,2,9,3,1,8,2,4,5
+141,Evaru,Telugu,5,8,0,4,6,5,6,6,2,7,5,8,0,9,9
+142,Kshanam,Telugu,7,8,1,7,6,7,9,8,9,5,5,1,9,7,6
+143,Mathu Vadalara,Telugu,7,0,1,4,10,3,5,6,1,3,8,2,0,2,3
+144,Mathu Vadalara 2,Telugu,7,0,1,4,10,3,5,6,1,3,8,2,0,2,3
+145,Shyam Singha Roy,Telugu,8,6,0,1,6,5,6,6,2,5,3,8,7,7,9
+146,Virupaksha,Telugu,9,0,1,4,8,7,6,6,2,5,5,7,7,7,6
+147,Dasara,Telugu,2,2,8,4,8,7,6,8,1,7,9,5,7,4,5
+148,Hi Nanna,Telugu,5,8,1,6,2,1,7,8,1,7,3,3,0,9,3
+149,Keedaa Cola,Telugu,9,2,2,7,8,1,6,6,2,1,5,8,9,1,5
+150,Tillu Square,Telugu,2,2,8,7,6,9,4,9,9,7,5,7,0,1,5
+151,DJ Tillu,Telugu,9,0,1,2,8,5,4,8,1,5,9,8,0,7,6
+152,Awe!,Telugu,5,6,5,4,4,3,7,2,0,1,5,3,7,4,8
+153,Brochevarevarura,Telugu,7,0,5,1,2,1,4,9,2,5,9,7,0,9,9
+154,Ante Sundaraniki,Telugu,7,1,0,4,8,5,4,4,2,7,1,3,0,7,6
+155,Sankranthiki Vasthunam,Telugu,2,1,1,1,6,3,7,9,2,1,7,5,9,7,9
+156,Guntur Kaaram,Telugu,3,1,0,1,2,5,8,8,0,7,7,8,9,4,6
+157,Game Changer,Telugu,9,6,5,4,6,3,4,8,6,1,3,5,0,1,8
+158,OG,Telugu,2,2,5,7,6,9,7,8,6,7,3,3,0,7,5
+159,Hari Hara Veera Mallu,Telugu,3,0,5,4,9,3,6,6,2,3,9,3,1,7,5
+160,Ugramm,Kannada,8,1,5,1,6,3,7,2,1,5,3,7,2,4,5
+161,Mufti,Kannada,2,1,5,7,4,1,4,8,1,3,9,1,1,7,5
+162,Ulidavaru Kandanthe,Kannada,5,0,2,2,8,7,4,4,6,5,9,3,2,4,8
+163,Rangitaranga,Kannada,7,8,1,4,8,5,4,6,9,7,5,7,7,2,6
+164,Avane Srimannarayana,Kannada,3,1,5,1,8,3,9,2,6,5,7,8,2,7,5
+165,Dia,Kannada,9,8,1,1,2,7,8,9,2,7,9,7,7,9,6
+166,Love Mocktail,Kannada,9,1,2,1,4,5,4,6,6,9,9,3,1,9,3
+167,Garuda Gamana Vrishabha Vahana,Kannada,3,6,0,4,6,1,6,8,2,7,3,1,9,9,9
+168,Kavaludaari,Kannada,3,2,8,4,9,3,4,9,0,5,9,3,0,2,6
+169,Tagaru,Kannada,8,6,2,2,2,9,7,9,9,3,7,3,9,7,6
+170,Bell Bottom,Kannada,7,1,0,1,2,3,7,9,6,7,3,5,9,1,3
+171,Popcorn Monkey Tiger,Kannada,9,1,1,7,2,1,7,4,0,1,5,8,0,1,3
+172,Hostel Hudugaru Bekagiddare,Kannada,8,6,5,1,6,1,8,8,2,7,7,5,1,7,8
+173,SSE Side A,Kannada,9,0,8,6,4,9,9,9,1,9,5,8,1,9,8
+174,SSE Side B,Kannada,2,0,5,6,8,3,4,4,9,1,3,5,7,7,5
+175,Ghost,Kannada,7,6,0,1,4,3,7,9,9,7,9,5,1,1,5
+176,Kabzaa,Kannada,5,1,5,1,4,7,6,4,0,1,7,7,1,2,9
+177,UI,Kannada,8,6,5,7,6,5,6,2,9,7,5,3,0,7,3
+178,Blink,Kannada,5,2,8,7,2,1,4,8,9,9,7,3,9,1,8
+179,Shakhahaari,Kannada,2,8,0,6,6,9,6,4,0,7,9,5,7,1,3
+180,Pather Panchali,Bengali,3,2,8,6,2,5,4,9,9,9,3,5,7,7,8
+181,Nayak,Bengali,2,0,0,6,2,1,7,4,6,7,9,8,7,1,8
+182,Meghe Dhaka Tara,Bengali,7,2,5,2,2,3,4,9,2,9,5,7,7,1,8
+183,Chokher Bali,Bengali,7,2,0,1,4,3,6,4,1,3,9,7,2,2,3
+184,Autograph,Bengali,8,6,8,4,6,5,7,4,1,5,9,3,2,4,5
+185,Baishe Srabon,Bengali,8,8,1,2,8,7,4,4,9,1,3,3,2,2,8
+186,Chotushkone,Bengali,3,8,2,2,2,7,7,2,9,1,3,1,0,7,3
+187,Bhooter Bhabishyat,Bengali,2,8,0,2,8,5,4,4,1,7,3,5,1,4,9
+188,Praktan,Bengali,5,8,0,7,2,1,6,4,6,5,3,7,9,9,6
+189,Nagarkirtan,Bengali,5,8,0,4,9,1,7,4,0,9,1,8,2,2,9
+190,Vinci Da,Bengali,9,1,1,7,4,7,6,8,0,3,1,8,2,9,8
+191,Byomkesh Bakshi,Bengali,7,0,1,4,6,5,9,6,9,7,3,8,1,7,3
+192,Feluda: Royal Bengal Rahasya,Bengali,3,6,2,2,6,7,7,2,2,3,9,3,0,2,5
+193,Kahaani (Bengali Context),Bengali,8,0,5,4,8,9,7,4,2,9,1,3,2,4,6
+194,Ballabhpurer Roopkotha,Bengali,3,2,1,2,9,3,4,8,0,9,9,5,7,4,9
+195,Dawshom Awbrotar,Bengali,9,0,1,1,9,9,8,2,1,5,7,5,2,4,8
+196,Tekka,Bengali,9,8,2,4,8,5,6,2,2,3,7,1,1,4,8
+197,Ajoykar Dacoit,Bengali,8,8,0,6,2,3,7,8,1,3,1,5,0,2,9
+198,Kabuliwala,Bengali,9,1,0,2,6,9,4,2,2,9,3,1,9,7,9
+199,Guptodhoner Sandhane,Bengali,2,8,2,2,2,9,8,4,6,7,9,7,0,7,8
+200,Sairat,Marathi,3,6,2,6,2,1,6,2,9,7,5,5,9,7,3
+201,Court,Marathi,6,1,1,6,2,2,10,8,0,5,4,9,0,4,7
+202,Fandry,Marathi,9,0,1,2,6,3,6,9,6,3,1,8,1,7,6
+203,Natsamrat,Marathi,3,8,0,6,2,1,9,6,9,7,5,5,0,7,9
+204,Katyar Kaljat Ghali,Marathi,8,1,2,4,9,9,7,8,2,7,1,7,1,7,9
+205,Harishchandrachi Factory,Marathi,9,0,5,6,9,1,6,9,9,1,5,5,2,7,6
+206,Dombivli Fast,Marathi,7,2,2,6,9,5,9,2,2,5,5,1,7,9,6
+207,Killa,Marathi,5,2,8,4,6,5,9,2,2,1,7,7,7,7,3
+208,Disciples,Marathi,9,6,5,1,9,5,4,6,6,1,7,3,2,7,5
+209,Pawankhind,Marathi,8,2,8,7,6,3,4,2,9,7,7,1,9,9,3
+210,Subhedar,Marathi,7,8,2,4,2,1,9,6,9,9,7,7,0,9,3
+211,Baipan Bhaari Deva,Marathi,3,6,8,1,8,5,8,6,1,7,5,7,2,7,9
+212,Jhabar,Marathi,7,1,8,1,8,3,8,4,9,7,1,1,7,9,6
+213,Valvi,Marathi,2,0,0,7,9,7,6,8,9,3,1,5,1,9,3
+214,Vaalvi 2,Marathi,3,0,0,6,4,1,8,4,0,3,5,3,1,9,9
+215,Village Rockstars,Assamese,8,8,5,1,2,7,4,9,0,7,1,7,2,9,9
+216,Aamis,Assamese,5,8,0,7,4,7,9,9,6,1,9,7,9,4,9
+217,Bulbul Can Sing,Assamese,2,2,2,7,4,1,9,6,1,7,3,5,7,1,8
+218,Rongman,Assamese,5,6,5,6,9,1,8,9,2,9,3,7,0,7,3
+219,Local Kung Fu,Assamese,5,1,8,7,2,7,8,9,9,9,9,3,7,1,8
+220,Sardar Udham (Regional Scale),Multi,7,1,2,1,9,9,6,2,0,7,7,3,7,9,8
+221,Kantri,Telugu,9,8,0,4,9,1,9,9,1,1,9,3,0,4,9
+222,Aagadu,Telugu,8,6,2,6,6,7,8,9,6,5,7,3,7,9,8
+223,Dookudu,Telugu,8,0,2,7,9,5,6,8,6,9,9,3,9,4,5
+224,Business Man,Telugu,5,2,2,4,6,7,9,2,0,1,9,5,0,1,9
