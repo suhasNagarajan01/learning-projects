@@ -1,0 +1,11 @@
+Order_ID,User_ID,Category,Revenue,Order_Date,Payment_Status
+1001,USR_948,Electronics,$1200.00,2026-01-15,Completed
+1002,USR_112,electronics,  85.5  ,2026-01-16,Completed
+1003,,HOME & KITCHEN,None,2026/01/17,Pending
+1004,USR_305,Clothing, "$45.00" ,18/01/2026,FAILED
+1005,USR_881,Electronics,N/A,2026-01-19,completed
+1006,USR_204,home & kitchen,310.0,2026.01.20,Completed
+1007,USR_112,, $12.50 ,2026-01-21,Refunded
+1008,USR_990,CLOTHING,invalid_amount,2026-01-22,Completed
+1009,USR_512,Electronics,2100.50,,Completed
+1010,USR_305,Beauty & Health,55.0,2026-01-24,pending
