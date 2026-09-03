@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fragment</title>
+</head>
+<body>
+
+    <!-- User Identification Modal -->
+    <div id="user-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modal-title">Welcome to Fragment</h3>
+            <p id="modal-sub">Please enter your name to start:</p>
+            <input type="text" id="modal-name-input" class="modal-input" placeholder="Your Name..." autocomplete="off">
+            <button id="modal-submit-btn" class="modal-btn" onclick="submitUserIdentity()">Continue</button>
+            <button id="modal-skip-middle-btn" class="modal-btn modal-btn-secondary" style="display:none;" onclick="skipMiddleName()">No Middle Name</button>
+        </div>
+    </div>
+
+    <header>
+        <img title="hamburger icon" src="{{ url_for('static', filename='images/hamburger-icon.webp') }}" alt="hamburger-icon">
+        <span id="app-title">Fragment</span>
+        <button id="clear-btn" class="clear-btn" title="Reset Chat">New Chat</button>
+    </header>
+
+    <main>
+        <div id="chat-container">
+            <!-- Welcome Banner -->
+            <section id="new-chat">
+                <img src="{{ url_for('static', filename='images/chabot-pfp.jpe') }}" alt="bot picture">
+                <p id="welcome-text">Welcome! Please enter your name to personalize your chat session.</p>
+                <div id="preference-tags" class="preference-list"></div>
+            </section>
+
+            <!-- Active Conversation Container -->
+            <div id="chat-messages" style="display: none;"></div>
+        </div>
+
+        <!-- Input Box -->
+        <form id="prompt-box" onsubmit="handleSend(event)">
+            <input id="prompt-input" name="user_prompt" title="enter the prompt here" type="text" placeholder="Please enter your prompt here..." required autocomplete="off">
+            <input type="submit" id="submit-btn" value="Submit">
+        </form>
+    </main>
+
+    <script>
+        const chatContainer = document.getElementById('chat-container');
+        const chatMessages = document.getElementById('chat-messages');
+        const newChatBanner = document.getElementById('new-chat');
+        const promptInput = document.getElementById('prompt-input');
+        const submitBtn = document.getElementById('submit-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const welcomeText = document.getElementById('welcome-text');
+        const preferenceTags = document.getElementById('preference-tags');
+
+        const botAvatar = "{{ url_for('static', filename='images/chabot-pfp.jpe') }}";
+
+        let currentFirstName = "";
+        let askedMiddle = false;
+
+        function scrollToBottom() {
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // --- User Identity Handling ---
+        async function submitUserIdentity() {
+            const inputField = document.getElementById('modal-name-input');
+            const inputValue = inputField.value.trim();
+            if (!inputValue) return;
+
+            let payload = {};
+
+            if (!askedMiddle) {
+                currentFirstName = inputValue;
+                payload = { name: currentFirstName };
+            } else {
+                payload = { name: currentFirstName, middle_name: inputValue, asked_middle: true };
+            }
+
+            try {
+                const res = await fetch('/identify-user', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+
+                if (data.ask_middle_name) {
+                    askedMiddle = true;
+                    document.getElementById('modal-title').innerText = "Middle Name Check";
+                    document.getElementById('modal-sub').innerText = `No user matched '${currentFirstName}'. Do you have a middle name?`;
+                    inputField.value = '';
+                    inputField.placeholder = "Enter Middle Name...";
+                    document.getElementById('modal-skip-middle-btn').style.display = 'block';
+                    return;
+                }
+
+                // Close Modal & Setup UI
+                document.getElementById('user-modal').style.display = 'none';
+                welcomeText.innerText = `Welcome back, ${data.display_name}! Feel free to ask me anything.`;
+                document.getElementById('app-title').innerText = `Fragment (${data.display_name})`;
+                
+                renderPreferences(data.preferences || []);
+
+            } catch (err) {
+                console.error("User identity error:", err);
+            }
+        }
+
+        function skipMiddleName() {
+            askedMiddle = true;
+            document.getElementById('modal-name-input').value = "";
+            submitUserIdentity();
+        }
+
+        function renderPreferences(prefs) {
+            preferenceTags.innerHTML = '';
+            if (prefs && prefs.length > 0) {
+                prefs.forEach(pref => {
+                    preferenceTags.innerHTML += `<span class="pref-tag">#${escapeHtml(pref)}</span>`;
+                });
+            }
+        }
+
+        // --- Chat Sending ---
+        async function handleSend(event) {
+            event.preventDefault();
+            const message = promptInput.value.trim();
+            if (!message) return;
+
+            newChatBanner.style.display = 'none';
+            chatMessages.style.display = 'flex';
+
+            const userHtml = `
+                <div class="message-wrapper user-wrapper">
+                    <div class="message user-message">${escapeHtml(message)}</div>
+                </div>`;
+            chatMessages.innerHTML += userHtml;
+
+            promptInput.value = '';
+            promptInput.disabled = true;
+            submitBtn.disabled = true;
+
+            const typingId = 'typing-' + Date.now();
+            const typingHtml = `
+                <div class="message-wrapper assistant-wrapper" id="${typingId}">
+                    <img class="avatar" src="${botAvatar}" alt="bot avatar">
+                    <div class="message assistant-message typing-indicator">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>`;
+            chatMessages.innerHTML += typingHtml;
+            scrollToBottom();
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ user_prompt: message })
+                });
+
+                const data = await response.json();
+                document.getElementById(typingId).remove();
+
+                const botHtml = `
+                    <div class="message-wrapper assistant-wrapper">
+                        <img class="avatar" src="${botAvatar}" alt="bot avatar">
+                        <div class="message assistant-message ${data.error ? 'error-msg' : ''}">${escapeHtml(data.reply)}</div>
+                    </div>`;
+                chatMessages.innerHTML += botHtml;
+
+                if (data.preferences) {
+                    renderPreferences(data.preferences);
+                }
+
+            } catch (err) {
+                document.getElementById(typingId).remove();
+                chatMessages.innerHTML += `
+                    <div class="message-wrapper assistant-wrapper">
+                        <img class="avatar" src="${botAvatar}" alt="bot avatar">
+                        <div class="message assistant-message error-msg">Server error. Check if Flask is running.</div>
+                    </div>`;
+            }
+
+            promptInput.disabled = false;
+            submitBtn.disabled = false;
+            promptInput.focus();
+            scrollToBottom();
+        }
+
+        clearBtn.addEventListener('click', async () => {
+            await fetch('/clear', { method: 'POST' });
+            chatMessages.innerHTML = '';
+            chatMessages.style.display = 'none';
+            newChatBanner.style.display = 'flex';
+        });
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "johnsmith": {
+        "display_name": "John smith .",
+        "preferences": [],
+        "message_count": 0
+    },
+    "johndoe": {
+        "display_name": "john doe",
+        "preferences": [],
+        "message_count": 0
+    }
+}
