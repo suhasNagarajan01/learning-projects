@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Study Buddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation & Reset -->
+        <aside class="sidebar">
+            <h2>🎓 Study Buddy</h2>
+            <p>Interactive 3-Stage Tutor</p>
+            <button class="reset-btn" onclick="resetApp()">🔄 Start Over</button>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- STAGE 1: Topic Input -->
+            <section id="stage-input" class="stage-card">
+                <h2>Stage 1: Enter Topic</h2>
+                <p>Enter any topic to generate notes and an interactive quiz.</p>
+                <form onsubmit="handleTopicSubmit(event)">
+                    <input type="text" id="topic-input" placeholder="e.g. TCP vs UDP, Quantum Computing, Photosynthesis" required autocomplete="off">
+                    <button type="submit" id="generate-btn">Generate Study Guide</button>
+                </form>
+            </section>
+
+            <!-- Loading Spinner -->
+            <div id="loading" class="loading-box" style="display: none;">
+                Synthesizing overview and constructing 3-question quiz...
+            </div>
+
+            <!-- STAGE 2: Quiz Active -->
+            <section id="stage-quiz" class="stage-card" style="display: none;">
+                <h2>Stage 2: Overview & Quiz</h2>
+                <div id="overview-box" class="overview-container"></div>
+                <hr>
+                <form id="quiz-form" onsubmit="handleQuizSubmit(event)">
+                    <div id="quiz-questions-container"></div>
+                    <button type="submit" id="submit-quiz-btn">Submit Quiz for Grading</button>
+                </form>
+            </section>
+
+            <!-- STAGE 3: Graded Results -->
+            <section id="stage-results" class="stage-card" style="display: none;">
+                <h2>Stage 3: Quiz Results</h2>
+                <div id="score-metric" class="score-card"></div>
+                <div id="graded-details-container"></div>
+                <button class="reset-btn" onclick="resetApp()">Try Another Topic</button>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        let currentQuizQuestions = [];
+
+        async function handleTopicSubmit(e) {
+            e.preventDefault();
+            const topic = document.getElementById('topic-input').value.trim();
+            if (!topic) return;
+
+            document.getElementById('stage-input').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+
+            try {
+                const res = await fetch('/generate-quiz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ topic: topic })
+                });
+
+                const data = await res.json();
+                document.getElementById('loading').style.display = 'none';
+
+                if (data.error) {
+                    alert(data.error);
+                    document.getElementById('stage-input').style.display = 'block';
+                    return;
+                }
+
+                // Render Overview
+                document.getElementById('overview-box').innerText = data.overview;
+                currentQuizQuestions = data.quiz;
+
+                // Render Questions Form
+                const container = document.getElementById('quiz-questions-container');
+                container.innerHTML = '';
+
+                data.quiz.forEach((q, index) => {
+                    let optionsHtml = q.options.map(opt => `
+                        <label class="radio-label">
+                            <input type="radio" name="question_${q.id}" value="${escapeHtml(opt)}" required>
+                            <span>${escapeHtml(opt)}</span>
+                        </label>
+                    `).join('');
+
+                    container.innerHTML += `
+                        <div class="question-block">
+                            <h3>Q${index + 1}: ${escapeHtml(q.question)}</h3>
+                            <div class="options-group">${optionsHtml}</div>
+                        </div>
+                    `;
+                });
+
+                document.getElementById('stage-quiz').style.display = 'block';
+
+            } catch (err) {
+                document.getElementById('loading').style.display = 'none';
+                alert("Failed to communicate with server.");
+                document.getElementById('stage-input').style.display = 'block';
+            }
+        }
+
+        async function handleQuizSubmit(e) {
+            e.preventDefault();
+
+            const userAnswers = {};
+            currentQuizQuestions.forEach(q => {
+                const selected = document.querySelector(`input[name="question_${q.id}"]:checked`);
+                if (selected) {
+                    userAnswers[q.id] = selected.value;
+                }
+            });
+
+            try {
+                const res = await fetch('/grade-quiz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ answers: userAnswers })
+                });
+
+                const data = await res.json();
+
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+
+                document.getElementById('stage-quiz').style.display = 'none';
+
+                // Display Final Metric Score
+                document.getElementById('score-metric').innerText = `Final Score: ${data.score} / ${data.total}`;
+
+                // Render Detailed Breakdown
+                const container = document.getElementById('graded-details-container');
+                container.innerHTML = '';
+
+                data.details.forEach((item, index) => {
+                    const badgeClass = item.is_correct ? 'badge-pass' : 'badge-fail';
+                    const badgeText = item.is_correct ? 'PASS' : 'FAIL';
+
+                    container.innerHTML += `
+                        <div class="result-card">
+                            <div class="result-header">
+                                <h3>Q${index + 1}: ${escapeHtml(item.question)}</h3>
+                                <span class="badge ${badgeClass}">${badgeText}</span>
+                            </div>
+                            <p><strong>Your Answer:</strong> ${escapeHtml(item.submitted_answer)}</p>
+                            <p><strong>Correct Answer:</strong> ${escapeHtml(item.correct_answer)}</p>
+                            <p class="explanation"><strong>Rationale:</strong> ${escapeHtml(item.explanation)}</p>
+                        </div>
+                    `;
+                });
+
+                document.getElementById('stage-results').style.display = 'block';
+
+            } catch (err) {
+                alert("Error grading quiz.");
+            }
+        }
+
+        function resetApp() {
+            document.getElementById('stage-quiz').style.display = 'none';
+            document.getElementById('stage-results').style.display = 'none';
+            document.getElementById('topic-input').value = '';
+            document.getElementById('stage-input').style.display = 'block';
+        }
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+    </script>
+</body>
+</html>
